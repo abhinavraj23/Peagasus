@@ -18,8 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".test_activity"
+        <activity android:name=".example_activity_homepage"
             android:theme="@style/Noactionbar"/>
+        <activity android:name=".example_activity_qrscanner" />
 
         <meta-data
             android:name="preloaded_fonts"

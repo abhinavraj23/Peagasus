@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-public class test_activity extends AppCompatActivity {
+public class example_activity_homepage extends AppCompatActivity {
 
     TabLayout tabLayout;
     View v;
