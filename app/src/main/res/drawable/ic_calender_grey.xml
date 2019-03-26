@@ -1,0 +1,18 @@
+<vector android:height="24dp" android:viewportHeight="25"
+    android:viewportWidth="24" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#707070" android:pathData="M5.5487,10.8834H3.6929V12.7598H5.5487V10.8834Z"/>
+    <path android:fillColor="#707070" android:pathData="M9.2604,10.8834H7.4045V12.7598H9.2604V10.8834Z"/>
+    <path android:fillColor="#707070" android:pathData="M12.972,10.8834H11.1162V12.7598H12.972V10.8834Z"/>
+    <path android:fillColor="#707070" android:pathData="M16.6837,10.8834H14.8279V12.7598H16.6837V10.8834Z"/>
+    <path android:fillColor="#707070" android:pathData="M20.3951,10.8834H18.5393V12.7598H20.3951V10.8834Z"/>
+    <path android:fillColor="#707070" android:pathData="M5.5487,14.6362H3.6929V16.5127H5.5487V14.6362Z"/>
+    <path android:fillColor="#707070" android:pathData="M9.2604,14.6362H7.4045V16.5127H9.2604V14.6362Z"/>
+    <path android:fillColor="#707070" android:pathData="M12.972,14.6362H11.1162V16.5127H12.972V14.6362Z"/>
+    <path android:fillColor="#707070" android:pathData="M16.6837,14.6362H14.8279V16.5127H16.6837V14.6362Z"/>
+    <path android:fillColor="#707070" android:pathData="M5.5487,18.3893H3.6929V20.2657H5.5487V18.3893Z"/>
+    <path android:fillColor="#707070" android:pathData="M9.2604,18.3893H7.4045V20.2657H9.2604V18.3893Z"/>
+    <path android:fillColor="#707070" android:pathData="M12.972,18.3893H11.1162V20.2657H12.972V18.3893Z"/>
+    <path android:fillColor="#707070" android:pathData="M16.6837,18.3893H14.8279V20.2657H16.6837V18.3893Z"/>
+    <path android:fillColor="#707070" android:pathData="M20.3951,14.6362H18.5393V16.5127H20.3951V14.6362Z"/>
+    <path android:fillColor="#707070" android:pathData="M21.1376,1.8764H20.0241V0H18.1683V1.8764H5.9198V0H4.064V1.8764H2.9505C1.4155,1.8764 0.1667,3.1391 0.1667,4.6911V21.2038C0.1667,22.7559 1.4155,24.0185 2.9505,24.0185H21.1376C22.6725,24.0185 23.9213,22.7559 23.9213,21.2038V4.6911C23.9213,3.1391 22.6725,1.8764 21.1376,1.8764ZM22.0655,21.2038C22.0655,21.7212 21.6492,22.1421 21.1376,22.1421H2.9505C2.4388,22.1421 2.0226,21.7212 2.0226,21.2038V8.8193H22.0655V21.2038ZM22.0655,6.9429H2.0226V4.6911C2.0226,4.1738 2.4388,3.7529 2.9505,3.7529H4.064V5.6293H5.9198V3.7529H18.1683V5.6293H20.0241V3.7529H21.1376C21.6492,3.7529 22.0655,4.1738 22.0655,4.6911V6.9429Z"/>
+</vector>

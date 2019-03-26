@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/mailTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Email ID"
+        android:textColorHint="@color/grey_secondary"
+        android:theme="@style/TextLabel"
+        app:layout_constraintBottom_toTopOf="@+id/emailWarningTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/mailET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/emailWarningTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Please enter a valid Email ID!"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/mobNoTIL"
+        app:layout_constraintStart_toStartOf="@+id/mailTIL" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/mobNoTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Mobile Number"
+        android:theme="@style/TextLabel"
+        app:layout_constraintBottom_toTopOf="@+id/mobNoWarningTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/mobNoET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/mobNoWarningTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Please enter a valid Mobile Number!"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/passwordTIL"
+        app:layout_constraintStart_toStartOf="@+id/mobNoTIL" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/passwordTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Password"
+        android:theme="@style/TextLabel"
+        app:layout_constraintBottom_toTopOf="@+id/forgotpassBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/passwordET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <ImageButton
+        android:id="@+id/visibilityToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordTIL"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
+        app:layout_constraintTop_toTopOf="@+id/passwordTIL"
+        app:srcCompat="@drawable/ic_outline_visibility_off_24px" />
+
+    <Button
+        android:id="@+id/forgotpassBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
+        android:text="Forgot Password?"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/nextBtn"
+        app:layout_constraintStart_toStartOf="@+id/passwordTIL" />
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/blue_circular_rect"
+        android:elevation="@dimen/btn_elevation"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/or"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTIL"
+        app:layout_constraintStart_toStartOf="@+id/forgotpassBtn" />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="or"
+        app:layout_constraintBottom_toTopOf="@+id/signUpGoogle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signUpGoogle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/white_circular_rect"
+        android:drawableStart="@drawable/googleg_standard_color_18"
+        android:elevation="@dimen/btn_elevation"
+        android:paddingStart="20dp"
+        android:text="Sign up with Google"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/nextBtn"
+        app:layout_constraintStart_toStartOf="@+id/nextBtn" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/termTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:linksClickable="true"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/terms"
+        android:textColorLink="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/signUpGoogle"
+        app:layout_constraintStart_toStartOf="@+id/signUpGoogle"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</android.support.constraint.ConstraintLayout>

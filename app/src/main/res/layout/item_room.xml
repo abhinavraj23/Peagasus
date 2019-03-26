@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/grey_border_circular_rect"
+    android:elevation="8dp">
+
+
+ <!--   <com.suke.widget.SwitchButton
+        android:id="@+id/toggleSwitch"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/roon_text"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/roon_text"
+        app:sb_checked_color="@color/blue"
+        app:sb_shadow_effect="true"
+        app:sb_uncheck_color="@color/btn_grey" />-->
+
+
+   <ToggleButton
+       android:id="@+id/toggleSwitch"
+       android:layout_width="49dp"
+       android:layout_height="22dp"
+       android:layout_marginStart="8dp"
+       android:layout_marginEnd="16dp"
+       android:background="@drawable/switch_background"
+
+       android:textOff=" "
+       android:textOn=" "
+       app:layout_constraintBottom_toBottomOf="@+id/roon_text"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.75"
+       app:layout_constraintStart_toStartOf="@+id/guideline"
+       app:layout_constraintTop_toTopOf="@+id/roon_text" />
+
+
+   <TextView
+       android:id="@+id/roon_text"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="16dp"
+       android:fontFamily="@font/roboto_slab_thin"
+       android:textColor="#1F1F1F"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       app:layout_constraintBottom_toBottomOf="@+id/room_ico"
+       app:layout_constraintStart_toEndOf="@+id/room_ico"
+       app:layout_constraintTop_toTopOf="@+id/room_ico"
+       tools:text="Kitchen" />
+
+   <ImageView
+       android:id="@+id/room_ico"
+       android:layout_width="41dp"
+       android:layout_height="41dp"
+       android:layout_marginStart="24dp"
+       android:layout_marginTop="16dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       tools:srcCompat="@drawable/kitchen" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <ImageView
+        android:id="@+id/im1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/room_ico"
+        app:layout_constraintTop_toBottomOf="@+id/room_ico"
+        tools:srcCompat="@drawable/ic_light_pink" />
+
+    <ImageView
+        android:id="@+id/im2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/im1"
+        app:layout_constraintStart_toEndOf="@+id/im1"
+        app:layout_constraintTop_toTopOf="@+id/im1"
+        tools:srcCompat="@drawable/ic_fan_pink" />
+
+    <ImageView
+        android:id="@+id/im3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/im2"
+        app:layout_constraintStart_toEndOf="@+id/im2"
+        app:layout_constraintTop_toTopOf="@+id/im2"
+        tools:srcCompat="@drawable/ic_tv_pink" />
+
+    <ImageView
+        android:id="@+id/im4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/im3"
+        app:layout_constraintStart_toEndOf="@+id/im3"
+        app:layout_constraintTop_toTopOf="@+id/im3"
+        tools:srcCompat="@drawable/ic_air_conditioner_pink" />
+
+
+</android.support.constraint.ConstraintLayout>

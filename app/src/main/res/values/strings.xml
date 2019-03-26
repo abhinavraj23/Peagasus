@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Peagasus</string>
+    
+    
+    <string name="terms">By siginigin, you agree to our <a href = "https://www.youtube.com/watch?v=aQIqQ2-lyO8">Terms</a>
+    and that you have read our <a href = "https://www.youtube.com">Data Use Policy</a> including our <a href = "https://www.youtube.com">Cookie Use</a>.</string>
+</resources>
