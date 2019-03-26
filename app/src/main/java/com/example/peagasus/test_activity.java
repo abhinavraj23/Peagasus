@@ -1,12 +1,18 @@
 package com.example.peagasus;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 public class test_activity extends AppCompatActivity {
@@ -19,7 +25,7 @@ public class test_activity extends AppCompatActivity {
     int greyImg[] = {R.drawable.ic_house_grey,R.drawable.ic_bulb_grey,R.drawable.ic_calender_grey};
     int blueImg[] = {R.drawable.ic_house_blue,R.drawable.ic_bulb_blue,R.drawable.ic_calender_blue};
 
-
+    ImageButton clickbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +40,35 @@ public class test_activity extends AppCompatActivity {
         tabLayout =  findViewById(R.id.tabLayout);
         setupTabIcons();
 
+        clickbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupWindow popupwindow_obj = popupDisplay();
+                popupwindow_obj.showAsDropDown(clickbtn,clickbtn.getLeft(), 0 , Gravity.TOP); // where u want show on view click event popupwindow.showAsDropDown(view, x, y);
+                //popupwindow_obj.showAsDropDown(findViewById(R.id.base));
+            }
+        });
+
+    }
+
+    public PopupWindow popupDisplay(){
+
+        final PopupWindow popupWindow = new PopupWindow(this);
+
+        // inflate your layout or dynamically add view
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View view = inflater.inflate(R.layout.popup_menu, null);
+
+        Button item = view.findViewById(R.id.button2);
+
+        popupWindow.setFocusable(true);
+        popupWindow.setBackgroundDrawable(null);
+        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setContentView(view);
+
+        return popupWindow;
     }
 
     private void setupTabIcons() {

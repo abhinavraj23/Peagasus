@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v4.view.MenuCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 PopupWindow popupwindow_obj = popupDisplay();
-                popupwindow_obj.showAsDropDown(clickbtn, 40, 40); // where u want show on view click event popupwindow.showAsDropDown(view, x, y);
+                popupwindow_obj.showAsDropDown(clickbtn,clickbtn.getLeft(), 0 ,Gravity.TOP); // where u want show on view click event popupwindow.showAsDropDown(view, x, y);
                 //popupwindow_obj.showAsDropDown(findViewById(R.id.base));
             }
         });
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity{
         setTitle("");
 
 
-        //startActivity(new Intent(MainActivity.this,test_activity.class));
+
 
 
 
