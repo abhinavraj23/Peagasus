@@ -12,13 +12,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.PopupWindow;
 
 
 public class MainActivity extends AppCompatActivity{
 
 
-    
+    ImageButton clickbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,16 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activty_homepage);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        clickbtn = findViewById(R.id.imageButton);
+
+        clickbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupWindow popupwindow_obj = popupDisplay();
+                popupwindow_obj.showAsDropDown(clickbtn, 40, 40); // where u want show on view click event popupwindow.showAsDropDown(view, x, y);
+                //popupwindow_obj.showAsDropDown(findViewById(R.id.base));
+            }
+        });
 
         setSupportActionBar(toolbar);
         setTitle("");
@@ -34,8 +45,7 @@ public class MainActivity extends AppCompatActivity{
         //startActivity(new Intent(MainActivity.this,test_activity.class));
 
 
-        PopupWindow popupwindow_obj = popupDisplay();
-        popupwindow_obj.showAsDropDown(clickbtn, -40, 18); // where u want show on view click event popupwindow.showAsDropDown(view, x, y);
+
 
     }
 
@@ -51,9 +61,10 @@ public class MainActivity extends AppCompatActivity{
 
         View view = inflater.inflate(R.layout.popup_menu, null);
 
-        Button item = (Button) view.findViewById(R.id.button2);
+        Button item = view.findViewById(R.id.button2);
 
         popupWindow.setFocusable(true);
+        popupWindow.setBackgroundDrawable(null);
         popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
         popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
         popupWindow.setContentView(view);
