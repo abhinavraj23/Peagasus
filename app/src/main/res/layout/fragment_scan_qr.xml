@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/custIDTV" />
 
 
-    <com.example.peagasus.CustomViews.OtpScannerView
+    <!--<com.example.peagasus.CustomViews.OtpScannerView
         android:id="@+id/relativeLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -41,7 +41,21 @@
         android:background="@drawable/grey_border_circular_rect"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/view2" >
+
+
+        <fragment
+            android:id="@+id/barcode"
+            android:name="com.google.android.gms.samples.vision.barcodereader.BarcodeCapture"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:gvb_auto_focus="true"
+            app:gvb_code_format="all_format"
+            app:gvb_flash="false"
+            app:gvb_rect_colors="@array/rect_color" />
+
+    </com.example.peagasus.CustomViews.OtpScannerView>-->
+
 
 
     <Button
@@ -76,6 +90,79 @@
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
         app:layout_constraintVertical_bias="0.95"
         app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout2"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout2"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout2"
+        android:background="@drawable/grey_border_circular_rect"
+        android:elevation="1dp">
+
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/top_left" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/top_right" />
+
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/bottom_left" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/bottom_right" />
+    </android.support.constraint.ConstraintLayout>
+
+    <com.example.peagasus.CustomViews.OtpScannerView
+    android:id="@+id/relativeLayout2"
+    android:layout_width="0dp"
+    android:layout_height="300dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="24dp"
+    android:background="@drawable/grey_border_circular_rect"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/view2">
+
+    <fragment
+        android:id="@+id/barcode"
+        android:name="com.google.android.gms.samples.vision.barcodereader.BarcodeCapture"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/grey_border_circular_rect"
+        app:gvb_auto_focus="true"
+        app:gvb_code_format="all_format"
+        app:gvb_flash="false"
+        app:gvb_rect_colors="@array/rect_color" />
+
+
+
+</com.example.peagasus.CustomViews.OtpScannerView>
+
+
 
 
 </android.support.constraint.ConstraintLayout>

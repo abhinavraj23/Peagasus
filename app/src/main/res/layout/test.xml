@@ -6,17 +6,19 @@
     android:layout_height="match_parent">
 
 
-    <me.dm7.barcodescanner.zxing.ZXingScannerView
-        android:id="@+id/scanner"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+    <fragment
+        android:id="@+id/barcode"
+        android:name="com.google.android.gms.samples.vision.barcodereader.BarcodeCapture"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/grey_border_circular_rect"
+        app:gvb_auto_focus="true"
+        app:gvb_code_format="all_format"
+        app:gvb_flash="false"
+        app:gvb_rect_colors="@array/rect_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

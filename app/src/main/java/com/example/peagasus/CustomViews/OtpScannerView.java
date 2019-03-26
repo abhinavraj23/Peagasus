@@ -1,10 +1,13 @@
 package com.example.peagasus.CustomViews;
 
 import android.content.Context;
+import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
 public class OtpScannerView extends RelativeLayout {
+
+
     public OtpScannerView(Context context) {
         super(context);
     }

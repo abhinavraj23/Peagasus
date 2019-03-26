@@ -1,75 +1,60 @@
 package com.example.peagasus;
 
-import android.content.Context;
-import android.content.Intent;
-import android.support.v4.view.MenuCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.PopupWindow;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.util.SparseArray;
+
+import com.google.android.gms.samples.vision.barcodereader.BarcodeCapture;
+import com.google.android.gms.samples.vision.barcodereader.BarcodeGraphic;
+import com.google.android.gms.vision.barcode.Barcode;
+
+import java.util.List;
+
+import xyz.belvi.mobilevisionbarcodescanner.BarcodeRetriever;
 
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements BarcodeRetriever {
 
 
-    ImageButton clickbtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activty_homepage);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        clickbtn = findViewById(R.id.imageButton);
-
-        clickbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupWindow popupwindow_obj = popupDisplay();
-                popupwindow_obj.showAsDropDown(clickbtn,clickbtn.getLeft(), 0 ,Gravity.TOP); // where u want show on view click event popupwindow.showAsDropDown(view, x, y);
-                //popupwindow_obj.showAsDropDown(findViewById(R.id.base));
-            }
-        });
-
-        setSupportActionBar(toolbar);
-        setTitle("");
+        setContentView(R.layout.fragment_scan_qr);
 
 
-
+        BarcodeCapture barcodeCapture = (BarcodeCapture) getSupportFragmentManager().findFragmentById(R.id.barcode);
+        barcodeCapture.setRetrieval(this);
 
 
 
 
     }
 
+    @Override
+    public void onRetrieved(Barcode barcode) {
+        Log.d("Code",barcode.displayValue);
+    }
 
+    @Override
+    public void onRetrievedMultiple(Barcode barcode, List<BarcodeGraphic> list) {
 
-    public PopupWindow popupDisplay()
-    {
+    }
 
-        final PopupWindow popupWindow = new PopupWindow(this);
+    @Override
+    public void onBitmapScanned(SparseArray<Barcode> sparseArray) {
 
-        // inflate your layout or dynamically add view
-        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
 
-        View view = inflater.inflate(R.layout.popup_menu, null);
+    @Override
+    public void onRetrievedFailed(String s) {
 
-        Button item = view.findViewById(R.id.button2);
+    }
 
-        popupWindow.setFocusable(true);
-        popupWindow.setBackgroundDrawable(null);
-        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setContentView(view);
+    @Override
+    public void onPermissionRequestDenied() {
 
-        return popupWindow;
     }
 }
